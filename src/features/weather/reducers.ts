@@ -1,25 +1,48 @@
 import { ActionReducerMapBuilder } from '@reduxjs/toolkit';
-import { fetchWeather } from './asyncActions';
+import { fetchWeatherByCityName, fetchWeatherByGeocode } from './asyncActions';
 import { WeatherState } from './type';
 
 export const weatherExtraReducers = (
   builder: ActionReducerMapBuilder<WeatherState>
 ): void => {
-  builder.addCase(fetchWeather.fulfilled, (state, action) => {
+  // fetchWeatherByCityName
+  builder.addCase(fetchWeatherByCityName.fulfilled, (state, action) => {
     state.weather = {
       data: action.payload,
       loading: false,
       error: undefined,
     };
   });
-  builder.addCase(fetchWeather.pending, (state) => {
+  builder.addCase(fetchWeatherByCityName.pending, (state) => {
     state.weather = {
       data: undefined,
       loading: true,
       error: undefined,
     };
   });
-  builder.addCase(fetchWeather.rejected, (state, action) => {
+  builder.addCase(fetchWeatherByCityName.rejected, (state, action) => {
+    state.weather = {
+      data: undefined,
+      error: action.error.message,
+      loading: false,
+    };
+  });
+  // fetchWeatherByGeocode
+  builder.addCase(fetchWeatherByGeocode.fulfilled, (state, action) => {
+    state.weather = {
+      data: action.payload,
+      loading: false,
+      error: undefined,
+    };
+  });
+  builder.addCase(fetchWeatherByGeocode.pending, (state) => {
+    state.weather = {
+      data: undefined,
+      loading: true,
+      error: undefined,
+    };
+  });
+  builder.addCase(fetchWeatherByGeocode.rejected, (state, action) => {
     state.weather = {
       data: undefined,
       error: action.error.message,
