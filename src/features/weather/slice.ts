@@ -4,8 +4,7 @@ import { WeatherState } from './type';
 
 const initialState: WeatherState = {
   weather: {
-    condition: undefined,
-    temperature: undefined,
+    data: undefined,
     loading: true,
     error: undefined,
   },
