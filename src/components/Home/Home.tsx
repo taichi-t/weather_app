@@ -2,6 +2,7 @@ import * as React from 'react';
 import { weatherSelector } from '@/features/weather/slice';
 import { useDispatch, useSelector } from 'react-redux';
 import { fetchWeather } from '@/features/weather/asyncActions';
+import { Form } from './Form';
 
 const Home: React.FC = () => {
   const { weather } = useSelector(weatherSelector);
@@ -14,7 +15,7 @@ const Home: React.FC = () => {
   return (
     <>
       <div />
-      home
+      <Form />
       <div />
     </>
   );
