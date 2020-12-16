@@ -1,6 +1,7 @@
 import * as React from 'react';
 import { BrowserRouter, Route, Switch } from 'react-router-dom';
 import Layout from '@/components/common/Layout/Layout';
+import 'tailwindcss/tailwind.css';
 import Home from '@/components/Home/Home';
 
 const App: React.FC = () => {

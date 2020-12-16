@@ -32,6 +32,14 @@ const clientConfig: Configuration = {
         use: 'html-loader',
         exclude: /node_modules/,
       },
+      {
+        test: /\.s?css$/,
+        use: [
+          'style-loader',
+          { loader: 'css-loader', options: { importLoaders: 1 } },
+          'postcss-loader',
+        ],
+      },
     ],
   },
   resolve: {
