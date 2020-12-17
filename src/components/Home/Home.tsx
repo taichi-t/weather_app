@@ -13,8 +13,6 @@ const Home: React.FC = () => {
   const { ui } = useSelector(uiSelector);
   const dispatch = useDispatch();
 
-  console.log(weather);
-
   React.useEffect(() => {
     navigator.geolocation.getCurrentPosition(
       (position) => {

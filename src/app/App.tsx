@@ -3,7 +3,7 @@ import { BrowserRouter, Route, Switch } from 'react-router-dom';
 import Layout from '@/components/common/Layout/Layout';
 import { useSelector } from 'react-redux';
 import { uiSelector } from '@/features/ui/slice';
-import 'tailwindcss/tailwind.css';
+import '@/style/index.css';
 import Home from '@/components/Home/Home';
 
 import { Helmet } from 'react-helmet';
@@ -15,9 +15,11 @@ const App: React.FC = () => {
       <Helmet>
         <style>{`body { background-color: ${
           ui.theme === 'theme-light' ? '#f2f3f5' : '#181818'
-        }; }`}</style>
+        };
+        transition: background-color 0.25s;
+         }`}</style>
       </Helmet>
-      <div className={`${ui.theme} content-transition`}>
+      <div className={`${ui.theme} bg-background content-transition`}>
         <Layout>
           <Switch>
             <Route path="/" exact component={Home} />
