@@ -4,6 +4,7 @@ import { useDispatch, useSelector } from 'react-redux';
 import fetchWeather from '@/features/weather/asyncActions';
 import { DEFAULT_CITY, API_KEY, BASE_URL } from '@/constants/index';
 import createRequestUrl from '@/util/createRequestUrl';
+import WeatherIcon from 'react-icons-weather';
 import { Form } from './Form';
 
 const Home: React.FC = () => {
@@ -36,18 +37,15 @@ const Home: React.FC = () => {
   console.log(weather.data?.main.temp);
   return (
     <>
-      <div />
-      {weather.data ? (
-        <img
-          src={`http://openweathermap.org/img/wn/${weather.data?.weather[0].icon}@2x.png`}
-          alt={weather.data?.weather[0].description}
-        />
-      ) : (
-        <p>spinner</p>
-      )}
       <p>{weather.data?.main.temp}</p>
       <Form />
-      <div />
+
+      <WeatherIcon
+        name="owm"
+        iconId={weather.data ? weather.data.weather[0].id : 200}
+        flip="horizontal"
+        rotate="90"
+      />
     </>
   );
 };
