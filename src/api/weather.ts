@@ -1,4 +1,3 @@
-import { API_KEY, DEFAULT_CITY } from '@/constants/index';
 import Axios, { AxiosInstance } from 'axios';
 
 export type WeatherResponse = {
@@ -42,25 +41,7 @@ class WeatherAPI {
     });
   }
 
-  fetchWeatherByCityName: GetRequet<string> = async (cityName) => {
-    const url = `http://api.openweathermap.org/data/2.5/weather?q=${
-      cityName || DEFAULT_CITY
-    }&appid=${API_KEY}`;
-    try {
-      const res = await this.axios.get<WeatherResponse>(url);
-      return res.data;
-    } catch (err) {
-      return Promise.reject(
-        new Error(err.response.data.message || err.message)
-      );
-    }
-  };
-
-  fetchWeatherByGeocode: GetRequet<{
-    latitude: number;
-    longitude: number;
-  }> = async (geocode) => {
-    const url = `http://api.openweathermap.org/data/2.5/weather?lat=${geocode.latitude}&lon=${geocode.longitude}&appid=${API_KEY}`;
+  fetchWeather: GetRequet<string> = async (url) => {
     try {
       const res = await this.axios.get<WeatherResponse>(url);
       return res.data;
