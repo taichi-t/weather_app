@@ -45,6 +45,7 @@ const clientConfig: Configuration = {
             },
           },
         ],
+        exclude: path.resolve(__dirname, 'src/images/'),
       },
       {
         test: /\.css$/,
@@ -54,6 +55,37 @@ const clientConfig: Configuration = {
           },
           { loader: 'css-loader', options: { importLoaders: 3 } },
           'postcss-loader',
+        ],
+      },
+      {
+        test: /\.(png|jpg|gif)$/,
+        use: [
+          {
+            loader: 'file-loader',
+            options: {
+              name: '[name].[ext]',
+              outputPath: 'images/',
+            },
+          },
+        ],
+      },
+      {
+        test: /\.svg$/,
+        use: [
+          'babel-loader',
+          {
+            loader: 'react-svg-loader',
+            options: {
+              svgo: {
+                plugins: [{ removeTitle: false }],
+                floatPrecision: 2,
+              },
+              options: {
+                name: '[name].[ext]',
+                outputPath: 'images/',
+              },
+            },
+          },
         ],
       },
     ],

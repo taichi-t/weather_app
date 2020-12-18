@@ -6,6 +6,7 @@ import fetchWeather from '@/features/weather/asyncActions';
 import { API_KEY, BASE_URL } from '@/constants/index';
 import createRequestUrl from '@/util/createRequestUrl';
 import { uiSelector } from '@/features/ui/slice';
+import Search from '@/images/search.svg';
 
 export const Form: React.FC = () => {
   const { ui } = useSelector(uiSelector);
@@ -53,9 +54,16 @@ export const Form: React.FC = () => {
         <button
           type="button"
           aria-label="Search"
-          className="absolute right-0 top-0 mt-3 mr-4"
-        />
-        <p>{error}</p>
+          className="absolute right-0 top-0 mt-2 mr-4"
+        >
+          {/* <img
+            src={Search}
+            alt="React Logo"
+            className="h-5 w-5 fill-current text-secondaryText"
+          /> */}
+          <Search />
+        </button>
+        {/* <p>{error}</p> */}
       </form>
     </div>
   );
