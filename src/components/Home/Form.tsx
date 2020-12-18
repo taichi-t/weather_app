@@ -40,16 +40,18 @@ export const Form: React.FC = () => {
         value={value}
         placeholder="Search"
         onChange={onChange}
-        className="bg-paper h-8 px-5 pr-10 rounded-full text-sm focus:outline-none"
+        className={`${
+          error ? 'bg-red-200' : 'bg-paper'
+        } h-8 px-5 pr-10 rounded-full text-sm focus:outline-none`}
       />
       <button
-        type="button"
+        type="submit"
         aria-label="Search"
         className="absolute right-0 top-0 mt-2 mr-3"
       >
         <Search className="h-5 w-5 fill-current text-secondaryText" />
       </button>
-      {/* <p>{error}</p> */}
+      <p className="absolute">{error}</p>
     </form>
   );
 };

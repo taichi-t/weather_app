@@ -19,6 +19,7 @@ h2::first-letter {
   /* bg-color */
   --color-background: #f2f3f5;
   --color-paper: #e4e4e4;
+  --color-skeleton: #c2c2c2;
 
   /* font-color */
   --color-primary-text: #000000;
@@ -32,6 +33,7 @@ h2::first-letter {
   /* bg-color */
   --color-background: #181818;
   --color-paper: #5a5a5a;
+  --color-skeleton: #707070;
 
   /* font-color */
   --color-primary-text: #ffffff;
