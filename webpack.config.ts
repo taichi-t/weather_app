@@ -3,6 +3,7 @@ import HtmlWebpackPlugin from 'html-webpack-plugin';
 import Dotenv from 'dotenv-webpack';
 import HardSourceWebpackPlugin from 'hard-source-webpack-plugin';
 import { Configuration } from 'webpack';
+import MiniCssExtractPlugin from 'mini-css-extract-plugin';
 
 const clientConfig: Configuration = {
   mode: 'development',
@@ -32,14 +33,7 @@ const clientConfig: Configuration = {
         use: 'html-loader',
         exclude: /node_modules/,
       },
-      {
-        test: /\.css$/,
-        use: [
-          'style-loader',
-          { loader: 'css-loader', options: { importLoaders: 1 } },
-          'postcss-loader',
-        ],
-      },
+
       {
         test: /\.(woff(2)?|ttf|eot|svg)(\?v=\d+\.\d+\.\d+)?$/,
         use: [
@@ -50,6 +44,16 @@ const clientConfig: Configuration = {
               outputPath: 'fonts/',
             },
           },
+        ],
+      },
+      {
+        test: /\.css$/,
+        use: [
+          {
+            loader: MiniCssExtractPlugin.loader,
+          },
+          { loader: 'css-loader', options: { importLoaders: 3 } },
+          'postcss-loader',
         ],
       },
     ],
@@ -72,6 +76,9 @@ const clientConfig: Configuration = {
   },
   plugins: [
     new Dotenv(),
+    new MiniCssExtractPlugin({
+      filename: 'style.css',
+    }),
     new HtmlWebpackPlugin({ template: './src/index.html' }),
     new HardSourceWebpackPlugin(),
   ],
