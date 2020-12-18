@@ -7,7 +7,7 @@ module.exports = {
         background: 'var(--color-background)',
         skeleton: 'var(--color-skeleton)',
         paper: 'var(--color-paper)',
-        border: 'var(--color-border)',
+        key: 'var(--color-key)',
         primaryText: 'var(--color-primary-text)',
         secondaryText: 'var(--color-secondary-text)',
       },
@@ -15,6 +15,9 @@ module.exports = {
         light: 300,
         normal: 400,
         bold: 700,
+      },
+      fontSize: {
+        super: 160,
       },
     },
   },

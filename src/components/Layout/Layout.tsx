@@ -9,9 +9,11 @@ type LayoutProps = {
 const Layout: React.FC = ({ children }: Partial<LayoutProps>) => {
   return (
     <>
-      <Header />
-      {children}
-      <Footer />
+      <div className="wrap">
+        <Header />
+        {children}
+        <Footer />
+      </div>
     </>
   );
 };

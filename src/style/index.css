@@ -1,6 +1,6 @@
 @tailwind base;
 @tailwind components;
-
+@import './weather-icons-wind.css';
 html {
   font-weight: 400;
 }
@@ -8,9 +8,11 @@ html {
 body {
   font-family: theme('fontFamily.sans');
   font-size: theme('fontSize.base');
-  max-width: theme('maxWidth.6xl');
-  margin: 0 auto;
   padding: 0 theme('padding.2');
+}
+
+h2::first-letter {
+  text-transform: capitalize;
 }
 
 .theme-light {
@@ -23,7 +25,7 @@ body {
   --color-secondary-text: #3f3f3f;
 
   /* devider */
-  --color-border: #7383be;
+  --color-key: #7383be;
 }
 
 .theme-dark {
@@ -36,15 +38,31 @@ body {
   --color-secondary-text: #b9b9b9;
 
   /* devider */
-  --color-border: #7383be;
+  --color-key: #7383be;
+}
+
+/* util  */
+.wrap {
+  margin: 0 auto;
+  max-width: theme('maxWidth.6xl');
+}
+
+.inner-wrap {
+  margin: 0 auto;
+  max-width: theme('maxWidth.md');
 }
 
 .content-transition {
   transition: background-color 0.25s;
 }
 
-.wrap {
-  max-width: 1;
+.capitalize-first-letter::first-letter {
+  text-transform: capitalize;
+}
+
+/* react-weather-icons */
+.wi {
+  line-height: inherit !important;
 }
 
 @tailwind utilities;

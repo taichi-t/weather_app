@@ -1,14 +1,13 @@
 import * as React from 'react';
-import { weatherSelector } from '@/features/weather/slice';
 import { useDispatch, useSelector } from 'react-redux';
 import fetchWeather from '@/features/weather/asyncActions';
 import { DEFAULT_CITY, API_KEY, BASE_URL } from '@/constants/index';
 import createRequestUrl from '@/util/createRequestUrl';
-import WeatherIcon from 'react-icons-weather';
 import { uiSelector } from '@/features/ui/slice';
+import Main from '@/components/Home/Main';
+import Description from '@/components/Home/Description';
 
 const Home: React.FC = () => {
-  const { weather } = useSelector(weatherSelector);
   const { ui } = useSelector(uiSelector);
   const dispatch = useDispatch();
 
@@ -38,16 +37,10 @@ const Home: React.FC = () => {
   }, []);
 
   return (
-    <>
-      <p>{weather.data?.main.temp}</p>
-
-      <WeatherIcon
-        name="owm"
-        iconId={weather.data ? String(weather.data.weather[0].id) : '200'}
-        flip="horizontal"
-        rotate="90"
-      />
-    </>
+    <main>
+      <Main />
+      <Description />
+    </main>
   );
 };
 

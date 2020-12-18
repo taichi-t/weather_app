@@ -1,6 +1,6 @@
 import * as React from 'react';
 import { BrowserRouter, Route, Switch } from 'react-router-dom';
-import Layout from '@/components/common/Layout/Layout';
+import Layout from '@/components/Layout/Layout';
 import { useSelector } from 'react-redux';
 import { uiSelector } from '@/features/ui/slice';
 import '@/style/index.css';

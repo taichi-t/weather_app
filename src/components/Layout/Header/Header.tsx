@@ -37,7 +37,7 @@ const Header: React.FC = () => {
     );
 
   return (
-    <div className="flex justify-between mt-12 items-center">
+    <header className="flex justify-between mt-12 items-center">
       <Form />
       <div className="inline-flex items-center">
         <div className=" mr-4">
@@ -46,8 +46,9 @@ const Header: React.FC = () => {
             name="fahrenheit"
             onClick={handleSetUnits}
             className={`rounded-r-none rounded-md border-r-0 border-2 border-secondaryText w-9 ${
-              ui.units === 'standard' ? 'bg-gray-300' : ''
+              ui.units === 'standard' ? 'bg-paper' : ''
             }`}
+            disabled={ui.units === 'standard'}
           >
             <span className="text-secondaryText">℉</span>
           </button>
@@ -56,8 +57,9 @@ const Header: React.FC = () => {
             name="celsius"
             onClick={handleSetUnits}
             className={`rounded-l-none rounded-md border-l-1 border-2 border-secondaryText w-9 ${
-              ui.units === 'metric' ? 'bg-gray-300' : ''
+              ui.units === 'metric' ? 'bg-paper' : ''
             }`}
+            disabled={ui.units === 'metric'}
           >
             <span className="text-secondaryText">℃</span>
           </button>
@@ -66,7 +68,7 @@ const Header: React.FC = () => {
           {themeToggleButtom}
         </button>
       </div>
-    </div>
+    </header>
   );
 };
 

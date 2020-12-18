@@ -33,26 +33,24 @@ export const Form: React.FC = () => {
   };
 
   return (
-    <div>
-      <form className="relative text-secondaryText" onSubmit={handleSubmit}>
-        <input
-          type="city"
-          name="city"
-          value={value}
-          placeholder="Search"
-          onChange={onChange}
-          className="bg-paper h-8 px-5 pr-10 rounded-full text-sm focus:outline-none"
-        />
-        <button
-          type="button"
-          aria-label="Search"
-          className="absolute right-0 top-0 mt-2 mr-3"
-        >
-          <Search className="h-5 w-5 fill-current text-secondaryText" />
-        </button>
-        {/* <p>{error}</p> */}
-      </form>
-    </div>
+    <form className="relative text-secondaryText" onSubmit={handleSubmit}>
+      <input
+        type="city"
+        name="city"
+        value={value}
+        placeholder="Search"
+        onChange={onChange}
+        className="bg-paper h-8 px-5 pr-10 rounded-full text-sm focus:outline-none"
+      />
+      <button
+        type="button"
+        aria-label="Search"
+        className="absolute right-0 top-0 mt-2 mr-3"
+      >
+        <Search className="h-5 w-5 fill-current text-secondaryText" />
+      </button>
+      {/* <p>{error}</p> */}
+    </form>
   );
 };
 
