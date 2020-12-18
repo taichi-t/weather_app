@@ -2,12 +2,15 @@
 @tailwind components;
 
 html {
-  font-size: 62.5%;
   font-weight: 400;
 }
 
 body {
-  font-size: 1.6rem;
+  font-family: theme('fontFamily.sans');
+  font-size: theme('fontSize.base');
+  max-width: theme('maxWidth.6xl');
+  margin: 0 auto;
+  padding: 0 theme('padding.2');
 }
 
 .theme-light {
@@ -38,6 +41,10 @@ body {
 
 .content-transition {
   transition: background-color 0.25s;
+}
+
+.wrap {
+  max-width: 1;
 }
 
 @tailwind utilities;

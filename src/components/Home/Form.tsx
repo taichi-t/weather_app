@@ -35,7 +35,6 @@ export const Form: React.FC = () => {
     <form onSubmit={handleSubmit}>
       <div>
         <label htmlFor="city">
-          city
           <input type="city" id="city" value={value} onChange={onChange} />
         </label>
         <p>{error}</p>

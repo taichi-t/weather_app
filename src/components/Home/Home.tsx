@@ -6,7 +6,6 @@ import { DEFAULT_CITY, API_KEY, BASE_URL } from '@/constants/index';
 import createRequestUrl from '@/util/createRequestUrl';
 import WeatherIcon from 'react-icons-weather';
 import { uiSelector } from '@/features/ui/slice';
-import { Form } from './Form';
 
 const Home: React.FC = () => {
   const { weather } = useSelector(weatherSelector);
@@ -41,7 +40,6 @@ const Home: React.FC = () => {
   return (
     <>
       <p>{weather.data?.main.temp}</p>
-      <Form />
 
       <WeatherIcon
         name="owm"

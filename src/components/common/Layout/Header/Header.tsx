@@ -5,6 +5,7 @@ import fetchWeather from '@/features/weather/asyncActions';
 import { API_KEY, BASE_URL, DEFAULT_CITY_ID } from '@/constants/index';
 import createRequestUrl from '@/util/createRequestUrl';
 import { uiSelector, setUnits, setTheme } from '@/features/ui/slice';
+import { Form } from '@/components/Home/Form';
 
 const Header: React.FC = () => {
   const { weather } = useSelector(weatherSelector);
@@ -27,13 +28,16 @@ const Header: React.FC = () => {
   };
 
   return (
-    <div>
-      <button type="button" onClick={handleSetUnits}>
-        {ui.units === 'standard' ? <p>F to C</p> : <p>C to F</p>}
-      </button>
-      <button type="button" onClick={handleSetTheme}>
-        darkmode
-      </button>
+    <div className="flex justify-between mt-12">
+      <Form />
+      <div>
+        <button type="button" onClick={handleSetUnits}>
+          {ui.units === 'standard' ? <p>F to C</p> : <p>C to F</p>}
+        </button>
+        <button type="button" onClick={handleSetTheme}>
+          darkmode
+        </button>
+      </div>
     </div>
   );
 };
