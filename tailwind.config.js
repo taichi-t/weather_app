@@ -19,6 +19,11 @@ module.exports = {
       fontSize: {
         super: 160,
       },
+      screens: {
+        mobile: { max: '767px' },
+        tablet: { min: '768px', max: '919px' },
+        desktop: { min: '920px' },
+      },
     },
   },
   variants: {},

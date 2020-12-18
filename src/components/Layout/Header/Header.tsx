@@ -37,10 +37,10 @@ const Header: React.FC = () => {
     );
 
   return (
-    <header className="flex justify-between mt-12 items-center">
+    <header className="flex justify-between mt-12 items-center mobile:mt-8">
       <Form />
       <div className="inline-flex items-center">
-        <div className=" mr-4">
+        <div className="mr-4 mobile:mr-2">
           <button
             type="button"
             name="fahrenheit"

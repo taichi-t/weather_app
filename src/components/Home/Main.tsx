@@ -13,10 +13,14 @@ const Main: React.FC = () => {
 
   const renderIcons = () => {
     if (weather.loading) {
-      return <Search className="fill-current text-secondaryText w-48 h-48" />;
+      return (
+        <Search className="fill-current text-secondaryText w-48 h-48 mobile:h-24 mobile:w-24" />
+      );
     }
     if (weather.error) {
-      return <Report className="fill-current text-secondaryText w-48 h-48" />;
+      return (
+        <Report className="fill-current text-secondaryText w-48 h-48 mobile:h-24 mobile:w-24" />
+      );
     }
     return (
       <>
@@ -25,9 +29,9 @@ const Main: React.FC = () => {
           iconId={weather.data ? String(weather.data.weather[0].id) : '200'}
           flip="horizontal"
           rotate="90"
-          className="fill-current text-primaryText text-super"
+          className="fill-current text-primaryText text-super mobile:text-8xl"
         />
-        <span className="text-6xl text-primaryText font-bold self-end">
+        <span className="text-6xl text-primaryText font-bold self-end mobile:text-4xl">
           {Math.round(weather.data?.main.temp as number)}
           {returnTempSymbol(ui.units)}
         </span>
@@ -38,21 +42,21 @@ const Main: React.FC = () => {
   const renderName = () => {
     if (weather.loading) {
       return (
-        <h2 className="text-center text-5xl text-secondaryText mt-16 font-bold">
+        <h2 className="text-center text-5xl text-secondaryText mt-16 font-bold mobile:mt-10 mobile:text-3xl">
           Seaching......
         </h2>
       );
     }
     if (weather.error) {
       return (
-        <h2 className="text-center text-5xl text-secondaryText mt-16 font-bold">
+        <h2 className="text-center text-5xl text-secondaryText mt-16 font-bold mobile:mt-10 mobile:text-3xl">
           Not found, please try again.
         </h2>
       );
     }
     return (
       <>
-        <h2 className="text-center text-5xl text-secondaryText mt-16 font-bold">
+        <h2 className="text-center text-5xl text-secondaryText mt-16 font-bold mobile:mt-10 mobile:text-3xl">
           {weather.data?.name}, {weather.data?.sys.country}
         </h2>
       </>

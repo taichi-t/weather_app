@@ -42,7 +42,7 @@ export const Form: React.FC = () => {
         onChange={onChange}
         className={`${
           error ? 'bg-red-200' : 'bg-paper'
-        } h-8 px-5 pr-10 rounded-full text-sm focus:outline-none`}
+        } h-8 px-5 pr-10 rounded-full text-sm focus:outline-none mobile:px-4`}
       />
       <button
         type="submit"

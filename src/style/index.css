@@ -8,7 +8,7 @@ html {
 body {
   font-family: theme('fontFamily.sans');
   font-size: theme('fontSize.base');
-  padding: 0 theme('padding.2');
+  padding: 0 theme('padding.3');
 }
 
 h2::first-letter {
