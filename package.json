@@ -69,7 +69,8 @@
     "start": "webpack-dev-server --config ./webpack.config.ts --hot",
     "built": "webpack",
     "test": "jest --coverage",
-    "lint": "eslint --ext .ts,.tsx ./src"
+    "lint": "eslint --ext .ts,.tsx ./src",
+    "clear-cache": "rm -rf node_modules/.cache/hard-source/"
   },
   "author": "Taichi Tsujioka",
   "license": "ISC"

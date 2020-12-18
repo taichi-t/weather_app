@@ -34,14 +34,6 @@ export const Form: React.FC = () => {
 
   return (
     <div>
-      {/* <form onSubmit={handleSubmit}>
-        <div>
-          <label htmlFor="city">
-            <input type="city" id="city" value={value} onChange={onChange} />
-          </label>
-          <p>{error}</p>
-        </div>
-      </form> */}
       <form className="relative text-secondaryText" onSubmit={handleSubmit}>
         <input
           type="city"
@@ -49,19 +41,14 @@ export const Form: React.FC = () => {
           value={value}
           placeholder="Search"
           onChange={onChange}
-          className="bg-paper h-8 px-5 pr-10 rounded-full text-sm focus:outline-none"
+          className="bg-paper h-10 px-5 pr-10 rounded-full text-sm focus:outline-none"
         />
         <button
           type="button"
           aria-label="Search"
-          className="absolute right-0 top-0 mt-2 mr-4"
+          className="absolute right-0 top-0 mt-3 mr-4"
         >
-          {/* <img
-            src={Search}
-            alt="React Logo"
-            className="h-5 w-5 fill-current text-secondaryText"
-          /> */}
-          <Search />
+          <Search className="h-5 w-5 fill-current text-secondaryText" />
         </button>
         {/* <p>{error}</p> */}
       </form>
