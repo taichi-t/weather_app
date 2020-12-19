@@ -47,7 +47,7 @@ class WeatherAPI {
       return res.data;
     } catch (err) {
       return Promise.reject(
-        new Error(err.response.data.message || err.message)
+        new Error(err.response?.data.message || err.message)
       );
     }
   };
