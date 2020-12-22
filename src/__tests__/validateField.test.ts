@@ -7,7 +7,6 @@ describe('validate field fn test', () => {
       expect(message).toBe('Please enter city name');
     });
   });
-
   it('should return false when value is not alphabetical letters', () => {
     validateField('#', (isValid, message) => {
       expect(isValid).toBe(false);
