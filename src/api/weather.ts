@@ -32,7 +32,7 @@ export type WeatherResponse = {
 
 type GetRequet<T> = (param: T) => Promise<WeatherResponse>;
 
-class WeatherAPI {
+export class WeatherAPI {
   axios: AxiosInstance;
 
   constructor() {

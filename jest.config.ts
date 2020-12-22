@@ -8,5 +8,8 @@ const config: Config.InitialOptions = {
   testEnvironment: 'node',
   testMatch: ['**/__tests__/**/*.ts?(x)', '**/?(*.)(test).ts?(x)'],
   setupFilesAfterEnv: ['./jest.setup.ts'],
+  moduleNameMapper: {
+    'src(.*)$': '<rootDir>/src/$1',
+  },
 };
 export default config;
