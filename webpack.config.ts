@@ -1,7 +1,6 @@
 import path from 'path';
 import HtmlWebpackPlugin from 'html-webpack-plugin';
 import Dotenv from 'dotenv-webpack';
-import HardSourceWebpackPlugin from 'hard-source-webpack-plugin';
 import { Configuration } from 'webpack';
 import MiniCssExtractPlugin from 'mini-css-extract-plugin';
 
@@ -112,7 +111,6 @@ const clientConfig: Configuration = {
       filename: 'style.css',
     }),
     new HtmlWebpackPlugin({ template: './src/index.html' }),
-    new HardSourceWebpackPlugin(),
   ],
   devtool: 'inline-source-map',
 };
