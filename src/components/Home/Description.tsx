@@ -7,6 +7,7 @@ import { List } from 'react-content-loader';
 
 const Description: React.FC = () => {
   const { weather } = useSelector(weatherSelector);
+
   const { ui } = useSelector(uiSelector);
   const renderDescription = () => {
     if (weather.loading) {

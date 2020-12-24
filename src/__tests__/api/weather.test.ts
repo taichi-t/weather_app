@@ -1,4 +1,4 @@
-import { WeatherAPI } from 'src/api/weather';
+import { WeatherAPI } from '@/api/weather';
 import axios from 'axios';
 
 /* eslint-disable  @typescript-eslint/no-explicit-any */

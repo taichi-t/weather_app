@@ -5,11 +5,12 @@ const config: Config.InitialOptions = {
   moduleFileExtensions: ['ts', 'tsx', 'js'],
   roots: ['<rootDir>/src'],
   preset: 'ts-jest',
-  testEnvironment: 'node',
+  testEnvironment: 'jsdom',
   testMatch: ['**/__tests__/**/*.ts?(x)', '**/?(*.)(test).ts?(x)'],
   setupFilesAfterEnv: ['./jest.setup.ts'],
   moduleNameMapper: {
-    'src(.*)$': '<rootDir>/src/$1',
+    '@/(.*)$': '<rootDir>/src/$1',
   },
+  moduleDirectories: ['node_modules', 'src'],
 };
 export default config;

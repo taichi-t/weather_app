@@ -1,4 +1,4 @@
-import validateField from '../util/validateField';
+import validateField from '@/util/validateField';
 
 describe('validate field fn test', () => {
   it('should return false when value is empty', () => {

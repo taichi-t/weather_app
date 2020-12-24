@@ -1,0 +1,543 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<Description> renders when data is loaded 1`] = `
+Object {
+  "asFragment": [Function],
+  "baseElement": <body>
+    <div>
+      <div
+        class="inner-wrap mt-12"
+      >
+        <h2
+          class="text-secondaryText font-bold"
+        >
+          feel like 
+          1
+          ℉
+          , 
+          string
+          .
+        </h2>
+        <ul
+          class=" border-l-2 border-key px-4 text-secondaryText text-base flex flex-wrap mt-2"
+        >
+          <li
+            class="mr-3"
+          >
+            <i
+              class="wi wi-wind towards-1-deg "
+            />
+             
+            1
+             m/s
+          </li>
+          <li
+            class="mr-3"
+          >
+            <i
+              class="wi wi-barometer"
+            />
+             
+            1
+             hPa
+          </li>
+          <li
+            class="mr-3"
+          >
+            <i
+              class="wi wi-humidity"
+            />
+             
+            1
+             %
+          </li>
+          <li
+            class="mr-3"
+          >
+            Visivility: 
+            1
+             
+          </li>
+          <li
+            class="mr-3"
+          >
+            <i
+              class="wi wi-umbrella"
+            />
+             
+            1
+             mm/h
+          </li>
+          <li
+            class="mr-3"
+          >
+            <i
+              class="wi wi-thermometer"
+            />
+             
+            1
+             
+            ℉
+          </li>
+          <li>
+            <i
+              class="wi wi-thermometer-exterior"
+            />
+             
+            1
+             
+            ℉
+          </li>
+        </ul>
+      </div>
+    </div>
+  </body>,
+  "container": <div>
+    <div
+      class="inner-wrap mt-12"
+    >
+      <h2
+        class="text-secondaryText font-bold"
+      >
+        feel like 
+        1
+        ℉
+        , 
+        string
+        .
+      </h2>
+      <ul
+        class=" border-l-2 border-key px-4 text-secondaryText text-base flex flex-wrap mt-2"
+      >
+        <li
+          class="mr-3"
+        >
+          <i
+            class="wi wi-wind towards-1-deg "
+          />
+           
+          1
+           m/s
+        </li>
+        <li
+          class="mr-3"
+        >
+          <i
+            class="wi wi-barometer"
+          />
+           
+          1
+           hPa
+        </li>
+        <li
+          class="mr-3"
+        >
+          <i
+            class="wi wi-humidity"
+          />
+           
+          1
+           %
+        </li>
+        <li
+          class="mr-3"
+        >
+          Visivility: 
+          1
+           
+        </li>
+        <li
+          class="mr-3"
+        >
+          <i
+            class="wi wi-umbrella"
+          />
+           
+          1
+           mm/h
+        </li>
+        <li
+          class="mr-3"
+        >
+          <i
+            class="wi wi-thermometer"
+          />
+           
+          1
+           
+          ℉
+        </li>
+        <li>
+          <i
+            class="wi wi-thermometer-exterior"
+          />
+           
+          1
+           
+          ℉
+        </li>
+      </ul>
+    </div>
+  </div>,
+  "debug": [Function],
+  "findAllByAltText": [Function],
+  "findAllByDisplayValue": [Function],
+  "findAllByLabelText": [Function],
+  "findAllByPlaceholderText": [Function],
+  "findAllByRole": [Function],
+  "findAllByTestId": [Function],
+  "findAllByText": [Function],
+  "findAllByTitle": [Function],
+  "findByAltText": [Function],
+  "findByDisplayValue": [Function],
+  "findByLabelText": [Function],
+  "findByPlaceholderText": [Function],
+  "findByRole": [Function],
+  "findByTestId": [Function],
+  "findByText": [Function],
+  "findByTitle": [Function],
+  "getAllByAltText": [Function],
+  "getAllByDisplayValue": [Function],
+  "getAllByLabelText": [Function],
+  "getAllByPlaceholderText": [Function],
+  "getAllByRole": [Function],
+  "getAllByTestId": [Function],
+  "getAllByText": [Function],
+  "getAllByTitle": [Function],
+  "getByAltText": [Function],
+  "getByDisplayValue": [Function],
+  "getByLabelText": [Function],
+  "getByPlaceholderText": [Function],
+  "getByRole": [Function],
+  "getByTestId": [Function],
+  "getByText": [Function],
+  "getByTitle": [Function],
+  "queryAllByAltText": [Function],
+  "queryAllByDisplayValue": [Function],
+  "queryAllByLabelText": [Function],
+  "queryAllByPlaceholderText": [Function],
+  "queryAllByRole": [Function],
+  "queryAllByTestId": [Function],
+  "queryAllByText": [Function],
+  "queryAllByTitle": [Function],
+  "queryByAltText": [Function],
+  "queryByDisplayValue": [Function],
+  "queryByLabelText": [Function],
+  "queryByPlaceholderText": [Function],
+  "queryByRole": [Function],
+  "queryByTestId": [Function],
+  "queryByText": [Function],
+  "queryByTitle": [Function],
+  "rerender": [Function],
+  "unmount": [Function],
+}
+`;
+
+exports[`<Description> renders when loading 1`] = `
+Object {
+  "asFragment": [Function],
+  "baseElement": <body>
+    <div>
+      <div
+        class="inner-wrap mt-12"
+      >
+        <svg
+          aria-labelledby="-aria"
+          role="img"
+          viewBox="0 0 400 110"
+        >
+          <title
+            id="-aria"
+          >
+            Loading...
+          </title>
+          <rect
+            clip-path="url(#-diff)"
+            height="100%"
+            role="presentation"
+            style="fill: url(#-animated-diff);"
+            width="100%"
+            x="0"
+            y="0"
+          />
+          <defs
+            role="presentation"
+          >
+            <clippath
+              id="-diff"
+            >
+              <rect
+                height="10"
+                rx="3"
+                ry="3"
+                width="250"
+                x="0"
+                y="0"
+              />
+              <rect
+                height="10"
+                rx="3"
+                ry="3"
+                width="220"
+                x="20"
+                y="20"
+              />
+              <rect
+                height="10"
+                rx="3"
+                ry="3"
+                width="170"
+                x="20"
+                y="40"
+              />
+              <rect
+                height="10"
+                rx="3"
+                ry="3"
+                width="250"
+                x="0"
+                y="60"
+              />
+              <rect
+                height="10"
+                rx="3"
+                ry="3"
+                width="200"
+                x="20"
+                y="80"
+              />
+              <rect
+                height="10"
+                rx="3"
+                ry="3"
+                width="80"
+                x="20"
+                y="100"
+              />
+            </clippath>
+            <lineargradient
+              id="-animated-diff"
+            >
+              <stop
+                offset="0%"
+                stop-color="var(--color-paper)"
+                stop-opacity="1"
+              >
+                <animate
+                  attributeName="offset"
+                  dur="1.2s"
+                  keyTimes="0; 0.25; 1"
+                  repeatCount="indefinite"
+                  values="-2; -2; 1"
+                />
+              </stop>
+              <stop
+                offset="50%"
+                stop-color="var(--color-skeleton)"
+                stop-opacity="1"
+              >
+                <animate
+                  attributeName="offset"
+                  dur="1.2s"
+                  keyTimes="0; 0.25; 1"
+                  repeatCount="indefinite"
+                  values="-1; -1; 2"
+                />
+              </stop>
+              <stop
+                offset="100%"
+                stop-color="var(--color-paper)"
+                stop-opacity="1"
+              >
+                <animate
+                  attributeName="offset"
+                  dur="1.2s"
+                  keyTimes="0; 0.25; 1"
+                  repeatCount="indefinite"
+                  values="0; 0; 3"
+                />
+              </stop>
+            </lineargradient>
+          </defs>
+        </svg>
+      </div>
+    </div>
+  </body>,
+  "container": <div>
+    <div
+      class="inner-wrap mt-12"
+    >
+      <svg
+        aria-labelledby="-aria"
+        role="img"
+        viewBox="0 0 400 110"
+      >
+        <title
+          id="-aria"
+        >
+          Loading...
+        </title>
+        <rect
+          clip-path="url(#-diff)"
+          height="100%"
+          role="presentation"
+          style="fill: url(#-animated-diff);"
+          width="100%"
+          x="0"
+          y="0"
+        />
+        <defs
+          role="presentation"
+        >
+          <clippath
+            id="-diff"
+          >
+            <rect
+              height="10"
+              rx="3"
+              ry="3"
+              width="250"
+              x="0"
+              y="0"
+            />
+            <rect
+              height="10"
+              rx="3"
+              ry="3"
+              width="220"
+              x="20"
+              y="20"
+            />
+            <rect
+              height="10"
+              rx="3"
+              ry="3"
+              width="170"
+              x="20"
+              y="40"
+            />
+            <rect
+              height="10"
+              rx="3"
+              ry="3"
+              width="250"
+              x="0"
+              y="60"
+            />
+            <rect
+              height="10"
+              rx="3"
+              ry="3"
+              width="200"
+              x="20"
+              y="80"
+            />
+            <rect
+              height="10"
+              rx="3"
+              ry="3"
+              width="80"
+              x="20"
+              y="100"
+            />
+          </clippath>
+          <lineargradient
+            id="-animated-diff"
+          >
+            <stop
+              offset="0%"
+              stop-color="var(--color-paper)"
+              stop-opacity="1"
+            >
+              <animate
+                attributeName="offset"
+                dur="1.2s"
+                keyTimes="0; 0.25; 1"
+                repeatCount="indefinite"
+                values="-2; -2; 1"
+              />
+            </stop>
+            <stop
+              offset="50%"
+              stop-color="var(--color-skeleton)"
+              stop-opacity="1"
+            >
+              <animate
+                attributeName="offset"
+                dur="1.2s"
+                keyTimes="0; 0.25; 1"
+                repeatCount="indefinite"
+                values="-1; -1; 2"
+              />
+            </stop>
+            <stop
+              offset="100%"
+              stop-color="var(--color-paper)"
+              stop-opacity="1"
+            >
+              <animate
+                attributeName="offset"
+                dur="1.2s"
+                keyTimes="0; 0.25; 1"
+                repeatCount="indefinite"
+                values="0; 0; 3"
+              />
+            </stop>
+          </lineargradient>
+        </defs>
+      </svg>
+    </div>
+  </div>,
+  "debug": [Function],
+  "findAllByAltText": [Function],
+  "findAllByDisplayValue": [Function],
+  "findAllByLabelText": [Function],
+  "findAllByPlaceholderText": [Function],
+  "findAllByRole": [Function],
+  "findAllByTestId": [Function],
+  "findAllByText": [Function],
+  "findAllByTitle": [Function],
+  "findByAltText": [Function],
+  "findByDisplayValue": [Function],
+  "findByLabelText": [Function],
+  "findByPlaceholderText": [Function],
+  "findByRole": [Function],
+  "findByTestId": [Function],
+  "findByText": [Function],
+  "findByTitle": [Function],
+  "getAllByAltText": [Function],
+  "getAllByDisplayValue": [Function],
+  "getAllByLabelText": [Function],
+  "getAllByPlaceholderText": [Function],
+  "getAllByRole": [Function],
+  "getAllByTestId": [Function],
+  "getAllByText": [Function],
+  "getAllByTitle": [Function],
+  "getByAltText": [Function],
+  "getByDisplayValue": [Function],
+  "getByLabelText": [Function],
+  "getByPlaceholderText": [Function],
+  "getByRole": [Function],
+  "getByTestId": [Function],
+  "getByText": [Function],
+  "getByTitle": [Function],
+  "queryAllByAltText": [Function],
+  "queryAllByDisplayValue": [Function],
+  "queryAllByLabelText": [Function],
+  "queryAllByPlaceholderText": [Function],
+  "queryAllByRole": [Function],
+  "queryAllByTestId": [Function],
+  "queryAllByText": [Function],
+  "queryAllByTitle": [Function],
+  "queryByAltText": [Function],
+  "queryByDisplayValue": [Function],
+  "queryByLabelText": [Function],
+  "queryByPlaceholderText": [Function],
+  "queryByRole": [Function],
+  "queryByTestId": [Function],
+  "queryByText": [Function],
+  "queryByTitle": [Function],
+  "rerender": [Function],
+  "unmount": [Function],
+}
+`;
