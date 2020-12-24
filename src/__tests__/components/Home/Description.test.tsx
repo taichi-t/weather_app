@@ -36,6 +36,7 @@ describe('<Description>', () => {
     const tree = render(<Description />);
     expect(tree).toMatchSnapshot();
   });
+
   it('renders when data is loaded', () => {
     const weatherState: WeatherResponse = {
       coord: { lon: 1, lat: 1 },
@@ -73,6 +74,18 @@ describe('<Description>', () => {
         data: weatherState,
         loading: false,
         error: undefined,
+      },
+    });
+    const tree = render(<Description />);
+    expect(tree).toMatchSnapshot();
+  });
+
+  it('renders when getting error', () => {
+    mocked(weatherSelector).mockReturnValue({
+      weather: {
+        data: undefined,
+        loading: false,
+        error: 'error',
       },
     });
     const tree = render(<Description />);
