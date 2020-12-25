@@ -12,5 +12,8 @@ const config: Config.InitialOptions = {
     '@/(.*)$': '<rootDir>/src/$1',
   },
   moduleDirectories: ['node_modules', 'src'],
+  transform: {
+    '^.+\\.svg$': 'jest-svg-transformer',
+  },
 };
 export default config;

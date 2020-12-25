@@ -33,7 +33,11 @@ export const Form: React.FC = () => {
   };
 
   return (
-    <form className="relative text-secondaryText" onSubmit={handleSubmit}>
+    <form
+      className="relative text-secondaryText"
+      onSubmit={handleSubmit}
+      data-testid="form"
+    >
       <input
         type="city"
         name="city"
@@ -43,15 +47,19 @@ export const Form: React.FC = () => {
         className={`${
           error ? 'bg-red-200' : 'bg-paper'
         } h-8 px-5 pr-10 rounded-full text-sm focus:outline-none mobile:px-4`}
+        data-testid="input"
       />
       <button
         type="submit"
         aria-label="Search"
         className="absolute right-0 top-0 mt-2 mr-3"
+        data-testid="button"
       >
         <Search className="h-5 w-5 fill-current text-secondaryText" />
       </button>
-      <p className="absolute">{error}</p>
+      <p className="absolute" data-testid="error-message">
+        {error}
+      </p>
     </form>
   );
 };
