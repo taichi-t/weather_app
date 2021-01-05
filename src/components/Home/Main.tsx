@@ -2,7 +2,7 @@ import * as React from 'react';
 import { weatherSelector } from '@/features/weather/slice';
 import { uiSelector } from '@/features/ui/slice';
 import { useSelector } from 'react-redux';
-import WeatherIcon from 'react-icons-weather';
+import { WeatherIcon } from 'weather-react-icons';
 import returnTempSymbol from '@/util/returnTempSymbol';
 import Search from '@/images/search.svg';
 import Report from '@/images/report-problem.svg';
@@ -26,10 +26,9 @@ const Main: React.FC = () => {
       <>
         <WeatherIcon
           name="owm"
-          iconId={weather.data ? String(weather.data.weather[0].id) : '200'}
-          flip="horizontal"
-          rotate="90"
+          iconId={weather.data ? weather.data.weather[0].id : 200}
           className="fill-current text-primaryText text-super mobile:text-8xl"
+          night={ui.theme === 'theme-dark'}
         />
         <span className="text-6xl text-primaryText font-bold self-end mobile:text-4xl">
           {Math.round(weather.data?.main.temp as number)}
@@ -43,7 +42,7 @@ const Main: React.FC = () => {
     if (weather.loading) {
       return (
         <h2 className="text-center text-5xl text-secondaryText mt-16 font-bold mobile:mt-10 mobile:text-3xl">
-          Seaching......
+          Searching......
         </h2>
       );
     }

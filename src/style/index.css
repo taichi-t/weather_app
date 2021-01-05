@@ -1,6 +1,10 @@
 @tailwind base;
 @tailwind components;
-@import './weather-icons-wind.css';
+
+@import '~weather-react-icons/lib/css/weather-icons.css';
+@import '~weather-react-icons/lib/css/weather-icons-wind.css';
+/* @import './weather-icons-wind.css'; */
+
 html {
   font-weight: 400;
 }

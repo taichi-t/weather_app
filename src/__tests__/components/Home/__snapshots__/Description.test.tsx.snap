@@ -56,17 +56,25 @@ Object {
           >
             Visivility: 
             1
-             
+             m 
           </li>
           <li
             class="mr-3"
           >
             <i
-              class="wi wi-umbrella"
+              class="wi wi-sunrise"
             />
              
-            1
-             mm/h
+            0:00:01
+          </li>
+          <li
+            class="mr-3"
+          >
+            <i
+              class="wi wi-sunset"
+            />
+             
+            0:00:01
           </li>
           <li
             class="mr-3"
@@ -144,17 +152,25 @@ Object {
         >
           Visivility: 
           1
-           
+           m 
         </li>
         <li
           class="mr-3"
         >
           <i
-            class="wi wi-umbrella"
+            class="wi wi-sunrise"
           />
            
-          1
-           mm/h
+          0:00:01
+        </li>
+        <li
+          class="mr-3"
+        >
+          <i
+            class="wi wi-sunset"
+          />
+           
+          0:00:01
         </li>
         <li
           class="mr-3"

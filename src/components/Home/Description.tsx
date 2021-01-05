@@ -4,6 +4,7 @@ import { useSelector } from 'react-redux';
 import { uiSelector } from '@/features/ui/slice';
 import returnTempSymbol from '@/util/returnTempSymbol';
 import { List } from 'react-content-loader';
+import convertTimestampToTime from '@/util/convertTimestampToTime';
 
 const Description: React.FC = () => {
   const { weather } = useSelector(weatherSelector);
@@ -40,9 +41,14 @@ const Description: React.FC = () => {
           <li className="mr-3">
             <i className="wi wi-humidity" /> {weather.data?.main.humidity} %
           </li>
-          <li className="mr-3">Visivility: {weather.data?.visibility} </li>
+          <li className="mr-3">Visivility: {weather.data?.visibility} m </li>
           <li className="mr-3">
-            <i className="wi wi-umbrella" /> {weather.data?.rain?.['1h']} mm/h
+            <i className="wi wi-sunrise" />{' '}
+            {convertTimestampToTime(weather.data?.sys.sunrise)}
+          </li>
+          <li className="mr-3">
+            <i className="wi wi-sunset" />{' '}
+            {convertTimestampToTime(weather.data?.sys.sunset)}
           </li>
           <li className="mr-3">
             <i className="wi wi-thermometer" /> {weather.data?.main.temp_max}{' '}
