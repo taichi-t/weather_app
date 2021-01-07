@@ -5,7 +5,7 @@ import { Configuration } from 'webpack';
 import MiniCssExtractPlugin from 'mini-css-extract-plugin';
 
 const clientConfig: Configuration = {
-  mode: 'development',
+  mode: 'production',
   target: 'web',
   entry: './src/index.tsx',
   output: {
